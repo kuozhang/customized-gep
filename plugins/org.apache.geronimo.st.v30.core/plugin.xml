@@ -352,7 +352,7 @@
      ##                                                                                                               ##
      ###################################################################################################################
      -->
-    <extension point="org.eclipse.hyades.trace.ui.launchConfigMechanismAssociator">
+    <!--extension point="org.eclipse.hyades.trace.ui.launchConfigMechanismAssociator">
        <association            
            launchConfigID = "org.apache.geronimo.st.v30.core.launchConfigurationType">
    
@@ -374,7 +374,7 @@
                </configuration>            
            </mechanism>    
        </association>
-   </extension>
+   </extension-->
       
       
       

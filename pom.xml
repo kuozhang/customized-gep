@@ -459,7 +459,7 @@
          | Added for Selenium artifacts (and is the same repo used by the server)
          |
          -->
-        <repository>
+        <!--repository>
             <id>releases.openqa.org</id>
             <name>Openqa Release Repository</name>
             <url>http://archiva.openqa.org/repository/releases</url>
@@ -484,7 +484,7 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
-        </repository>
+        </repository-->
     </repositories>
                         
     <pluginRepositories>

@@ -174,7 +174,7 @@
         </operationExtension>
     </extension>
     
-    <extension
+    <!--extension
        point="org.eclipse.hyades.trace.ui.launchConfigMechanismAssociator">
        <association            
            launchConfigID = "org.apache.geronimo.st.core.launchConfigurationType">
@@ -197,6 +197,6 @@
                </configuration>            
            </mechanism>    
        </association>
-   </extension>
+   </extension-->
    
 </plugin>
