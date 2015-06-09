@@ -159,17 +159,17 @@
          | Plug-ins
          |
          -->
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.j2ee.v11.jaxbmodel</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.jee.v21.jaxbmodel</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
@@ -183,29 +183,29 @@
             <version>${version}</version>
         </dependency>
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.runtime.v11</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.runtime.v20</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.runtime.v21</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.runtime.v22</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
@@ -231,59 +231,59 @@
             <version>${version}</version>
         </dependency>
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v11.schemas</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v11.core</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v11.ui</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v20.core</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v20.ui</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v21.core</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v21.ui</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v22.core</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
-        <dependency>
+        <!--dependency>
             <groupId>org.apache.geronimo.devtools</groupId>
             <artifactId>org.apache.geronimo.st.v22.ui</artifactId>
             <version>${version}</version>
-        </dependency>
+        </dependency-->
 
         <dependency>
             <groupId>org.apache.geronimo.devtools</groupId>

@@ -63,6 +63,7 @@ import org.apache.geronimo.st.v30.core.operations.SharedLibEntryDataModelProvide
 import org.apache.geronimo.st.v30.core.osgi.AriesHelper;
 import org.apache.geronimo.st.v30.core.osgi.AriesHelper.BundleInfo;
 import org.apache.geronimo.st.v30.core.osgi.OSGiModuleHandler;
+import org.apache.geronimo.st.v30.core.util.GeronimoPublishHelper;
 import org.apache.geronimo.st.v30.core.util.JMXKernel;
 import org.apache.geronimo.st.v30.core.util.Utils;
 import org.eclipse.core.commands.ExecutionException;
@@ -911,30 +912,36 @@ public class GeronimoServerBehaviourDelegate extends ServerBehaviourDelegate imp
      */
     public void publishModule(int kind, int deltaKind, IModule[] module, IProgressMonitor monitor) throws CoreException {
         Trace.tracePoint("Entry", Activator.traceCore, "GeronimoServerBehaviourDelegate.publishModule", publishKindToString(kind), deltaKindToString(deltaKind), Arrays.asList(module), monitor);
-        try {
-            //NO_CHANGE need if app is associated but not started and no delta
-            if (deltaKind == NO_CHANGE && module.length == 1) {
-                invokeCommand(deltaKind, module[0], monitor);
+
+        boolean shouldPublishModule = GeronimoPublishHelper.prePublishModule(this, kind, deltaKind, module,
+                getPublishedResourceDelta(module), monitor);
+
+        if (shouldPublishModule) {
+
+            try {
+                // NO_CHANGE need if app is associated but not started and no delta
+                if (deltaKind == NO_CHANGE && module.length == 1) {
+                    invokeCommand(deltaKind, module[0], monitor);
+                } else if (deltaKind == CHANGED || deltaKind == ADDED || deltaKind == REMOVED) {
+                    invokeCommand(deltaKind, module[0], monitor);
+                }
+                setModuleStatus(module, null);
+                setModulePublishState(module, IServer.PUBLISH_STATE_NONE);
+            } catch (CoreException e) {
+                //
+                // Set the parent module publish state to UNKNOWN so that WTP will display "Republish" instead
+                // "Synchronized" for the server state, and set the module status to an error message
+                // for the GEP end-user to see.
+                //
+                setModuleStatus(module, new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+                        "Error publishing module to server"));
+                setModulePublishState(module, IServer.PUBLISH_STATE_UNKNOWN);
+                setModuleState(module, IServer.STATE_UNKNOWN);
+                throw e;
             }
-            else if (deltaKind == CHANGED || deltaKind == ADDED || deltaKind == REMOVED) {
-                invokeCommand(deltaKind, module[0], monitor);
-            }
-            setModuleStatus(module, null);
-            setModulePublishState(module, IServer.PUBLISH_STATE_NONE);
-        } 
-        catch (CoreException e) {
-            //
-            // Set the parent module publish state to UNKNOWN so that WTP will display "Republish" instead
-            // "Synchronized" for the server state, and set the module status to an error message 
-            // for the GEP end-user to see. 
-            //            
-            setModuleStatus(module, new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Error publishing module to server"));
-            setModulePublishState(module, IServer.PUBLISH_STATE_UNKNOWN);
-            setModuleState(module, IServer.STATE_UNKNOWN);
-            throw e;
+
+            Trace.tracePoint("Exit ", Activator.traceCore, "GeronimoServerBehaviourDelegate.publishModule");
         }
-        
-        Trace.tracePoint("Exit ", Activator.traceCore, "GeronimoServerBehaviourDelegate.publishModule");
     }
     
     @Override

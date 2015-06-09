@@ -22,8 +22,11 @@ Building Geroniomo Eclipse Plugin
 To build you will need:
 
  * JDK 6.0 (J2SE 1.6.0) (http://java.sun.com/j2se/1.6.0)
- * Maven 2.2.1 (http://maven.apache.org)
+ * Maven 2.2.1 (http://maven.apache.org), Maven 3.x doesn't work
 
+Recommanded OPTS: 
+
+    MAVEN_OPTS="-Xms512m -Xmx1024m -XX:MaxPermSize=512m"
 
 To build all changes incrementally:
 
@@ -34,4 +37,6 @@ source tree:
 
     mvn clean install
 
+To disable tests:
 
+   mvn clean install -Dtest=false -DfailIfNoTests=false

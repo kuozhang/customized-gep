@@ -55,29 +55,29 @@
             <outputDirectory>plugins/</outputDirectory>
             <unpack>false</unpack>
             <includes>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.j2ee.v11.jaxbmodel</include>
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.j2ee.v11.jaxbmodel</include-->
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.jaxbmodel.common</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.jee.v21.jaxbmodel</include>
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.jee.v21.jaxbmodel</include-->
                 <!-- need to add jee.v22.jaxbmodel -->
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.jee.v22.jaxbmodel</include>
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.jee.v22.jaxbmodel</include-->
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.common</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v11</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v20</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v21</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v22</include>
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v11</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v20</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v21</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v22</include-->
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.runtime.v30</include>
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.st.core</include>
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.st.ui</include>
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.st.schemas</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v11.schemas</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v11.core</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v11.ui</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v20.core</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v20.ui</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v21.core</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v21.ui</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v22.core</include>
-                <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v22.ui</include>
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v11.schemas</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v11.core</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v11.ui</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v20.core</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v20.ui</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v21.core</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v21.ui</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v22.core</include-->
+                <!--include>org.apache.geronimo.devtools:org.apache.geronimo.st.v22.ui</include-->
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v30.core</include>
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v30.jaxbmodel</include>
                 <include>org.apache.geronimo.devtools:org.apache.geronimo.st.v30.ui</include>

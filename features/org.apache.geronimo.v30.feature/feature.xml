@@ -77,32 +77,32 @@
          install-size="1160"
          version="${osgi.pom.version}"/>
         
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v21.core"
          download-size="48"
          install-size="48"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
     
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v21.ui"
          download-size="164"
          install-size="164"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
 
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.runtime.v21"
          download-size="1252"
          install-size="1252"
-         version="${osgi.pom.version}"/>
+         version="${osgi.pom.version}"/-->
 
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.jee.v21.jaxbmodel"
          download-size="140"
          install-size="140"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
          
     <plugin
          id="org.apache.geronimo.st.v30.core"
@@ -131,79 +131,79 @@
          install-size="1052"
          version="${osgi.pom.version}"/>
          
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v22.core"
          download-size="20"
          install-size="20"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
          
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v22.ui"
          download-size="16"
          install-size="16"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
          
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.runtime.v22"
          download-size="1052"
          install-size="1052"
-         version="${osgi.pom.version}"/>
+         version="${osgi.pom.version}"/-->
          
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v20.core"
          download-size="20"
          install-size="20"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
          
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v20.ui"
          download-size="16"
          install-size="16"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
          
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.runtime.v20"
          download-size="1052"
          install-size="1052"
-         version="${osgi.pom.version}"/>
+         version="${osgi.pom.version}"/-->
          
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v11.core"
          download-size="48"
          install-size="48"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
     
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v11.ui"
          download-size="164"
          install-size="164"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
 
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.runtime.v11"
          download-size="1252"
          install-size="1252"
-         version="${osgi.pom.version}"/>
+         version="${osgi.pom.version}"/-->
 
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.j2ee.v11.jaxbmodel"
          download-size="140"
          install-size="140"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
     
-    <plugin
+    <!--plugin
          id="org.apache.geronimo.st.v11.schemas"
          download-size="72"
          install-size="72"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
 
      <plugin
          id="org.apache.geronimo.jaxbmodel.common"
@@ -212,10 +212,10 @@
          version="${osgi.pom.version}"
          unpack="false"/>
 
-     <plugin
+     <!--plugin
          id="org.apache.geronimo.jee.v22.jaxbmodel"
          download-size="31"
          install-size="31"
          version="${osgi.pom.version}"
-         unpack="false"/>
+         unpack="false"/-->
 </feature>

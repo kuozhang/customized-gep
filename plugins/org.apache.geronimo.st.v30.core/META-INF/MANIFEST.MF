@@ -32,12 +32,7 @@ Require-Bundle:
  org.eclipse.wst.common.frameworks,
  org.eclipse.wst.common.project.facet.core,
  org.eclipse.wst.server.core,
- org.eclipse.hyades.trace.ui;resolution:=optional,
- org.eclipse.tptp.trace.jvmti.client;resolution:=optional,
- org.eclipse.tptp.platform.profile.server.core;resolution:=optional,
- org.eclipse.tptp.platform.jvmti.client;resolution:=optional,
- org.eclipse.wst.web,
- com.ibm.etools.aries.core;resolution:=optional
+ org.eclipse.wst.web
 Bundle-ActivationPolicy: lazy
 Export-Package: 
  org.apache.geronimo.st.v30.core,
@@ -49,4 +44,3 @@ Export-Package:
  org.apache.geronimo.st.v30.core.jaxb,
  org.apache.geronimo.st.v30.core.operations,
  org.apache.geronimo.st.v30.core.osgi
-
