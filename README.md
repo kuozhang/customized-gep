@@ -1,0 +1,50 @@
+#=====================================================================
+#  Licensed to the Apache Software Foundation (ASF) under one or more
+#  contributor license agreements.  See the NOTICE file distributed with
+#  this work for additional information regarding copyright ownership.
+#  The ASF licenses this file to You under the Apache License, Version 2.0
+#  (the "License"); you may not use this file except in compliance with
+#  the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#=====================================================================
+
+
+Building Geroniomo Eclipse Plugin
+=================================
+
+To build you will need:
+
+ * JDK 6.0 (J2SE 1.6.0) (http://java.sun.com/j2se/1.6.0)
+ * Maven 2.2.1 (http://maven.apache.org)
+   note: Maven 3.x doesn't work
+
+Recommanded OPTS: 
+
+    MAVEN_OPTS="-Xms512m -Xmx1024m -XX:MaxPermSize=512m"
+
+To build all changes incrementally:
+
+    mvn install
+
+To perform clean builds, which are sometimes needed after some changes to the 
+source tree:
+
+    mvn clean install
+
+To disable tests:
+
+   mvn clean install -Dtest=false -DfailIfNoTests=false
+
+
+Import into Eclipse
+===================
+File --> Import --> Gerenal --> Existing Projects into Workspace,
+Browse to plugins path, import plugins, no need to import features.
+
