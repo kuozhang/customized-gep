@@ -55,10 +55,13 @@ import org.eclipse.wst.server.core.IModuleType;
 import org.eclipse.wst.server.core.IServer;
 import org.eclipse.wst.server.core.ServerPort;
 import org.eclipse.wst.server.core.ServerUtil;
+import org.eclipse.wst.server.core.internal.Server;
 import org.eclipse.wst.server.core.internal.ServerMonitorManager;
+import org.eclipse.wst.server.core.internal.ServerWorkingCopy;
 import org.eclipse.wst.server.core.model.ServerDelegate;
 import org.eclipse.wst.server.core.util.SocketUtil;
 import org.eclipse.wst.web.internal.deployables.FlatComponentDeployable;
+
 
 
 /**
@@ -563,9 +566,14 @@ public class GeronimoServerDelegate extends ServerDelegate implements IGeronimoS
         setInPlaceSharedLib(false);
         setRunFromWorkspace(false);
         setSelectClasspathContainers(false);
+        setAutoPublishSetting(Server.AUTO_PUBLISH_DISABLE);
         
         resumeArgUpdates();
         Trace.tracePoint("Exit", Activator.traceCore, "GeronimoServerDelegate.setDefaults", monitor);
+    }
+    
+    private void setAutoPublishSetting(int setting) {
+        ((ServerWorkingCopy)getServerWorkingCopy()).setAutoPublishSetting(setting);
     }
     
     @Override
@@ -984,7 +992,7 @@ public class GeronimoServerDelegate extends ServerDelegate implements IGeronimoS
         addParm(args, "-Djava.endorsed.dirs=\"$(GERONIMO_HOME)/lib/endorsed", pS, "$(JRE_HOME)/lib/endorsed\"");
 
         // Specify the minimum memory options for the Geronimo server
-        addParm(args, "-Xms256m -Xmx512m -XX:MaxPermSize=128m");
+        addParm(args, "-Xms256m -Xmx1536m -XX:MaxPermSize=512m");
 
         // Specify GERONIMO_BASE
         addParm(args, "-Dorg.apache.geronimo.home.dir=\"$(GERONIMO_HOME)\"");

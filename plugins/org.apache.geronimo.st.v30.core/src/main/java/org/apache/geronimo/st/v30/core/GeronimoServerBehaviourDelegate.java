@@ -917,7 +917,6 @@ public class GeronimoServerBehaviourDelegate extends ServerBehaviourDelegate imp
                 getPublishedResourceDelta(module), monitor);
 
         if (shouldPublishModule) {
-
             try {
                 // NO_CHANGE need if app is associated but not started and no delta
                 if (deltaKind == NO_CHANGE && module.length == 1) {

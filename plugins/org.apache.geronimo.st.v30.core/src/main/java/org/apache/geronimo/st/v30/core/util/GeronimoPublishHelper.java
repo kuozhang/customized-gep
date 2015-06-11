@@ -22,11 +22,9 @@ public class GeronimoPublishHelper {
 
     public static boolean prePublishModule(ServerBehaviourDelegate delegate, int kind, int deltaKind, IModule[] module,
             IModuleResourceDelta[] resourceDelta, IProgressMonitor monitor) {
-
         boolean retval = true;
 
         IModulePrePublisher[] modulePrePublishers = getModulePublishers();
-
         if (modulePrePublishers != null && modulePrePublishers.length > 0) {
             IModulePrePublisher prePublisher = modulePrePublishers[0];
             retval = prePublisher.prePublishModule(delegate, kind, deltaKind, module, resourceDelta, monitor);
