@@ -226,11 +226,11 @@
         </launchConfigurationTabGroup>
     </extension>
 
-    <extension point="org.apache.geronimo.st.ui.actionURLs">
+    <!--extension point="org.apache.geronimo.st.ui.actionURLs">
         <server_prefix>org.apache.geronimo.</server_prefix>
         <action_URL class="org.apache.geronimo.st.ui.actions.LaunchGeronimoSupportAction"
                     URL="http://geronimo.apache.org/" />
-    </extension>
+    </extension-->
     
     <extension point="org.eclipse.ltk.core.refactoring.renameParticipants">         
         <renameParticipant    

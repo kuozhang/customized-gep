@@ -272,7 +272,7 @@
         </objectContribution>
     </extension>
     
-    <extension point="org.eclipse.ui.popupMenus">
+    <!--extension point="org.eclipse.ui.popupMenus">
         <objectContribution
                 adaptable="true"
                 id="org.apache.geronimo.ui.serveractions.30"
@@ -288,7 +288,7 @@
                 enablesFor="1">
             </action>
         </objectContribution>
-    </extension>
+    </extension-->
     
     <extension point="org.apache.geronimo.st.ui.loader">
            <loader class="org.apache.geronimo.st.v30.ui.editors.GeronimoFormContentLoader" version="3.0"/>
@@ -340,7 +340,7 @@
      ##                                                                                                               ##
      ###################################################################################################################
      -->
-    <extension point="org.eclipse.ui.commands">
+    <!--extension point="org.eclipse.ui.commands">
         <category 
               description="Isolate all the various GEP downloads into a single menu"
               id="org.apache.geronimo.st.v30.ui.commands.category"
@@ -358,7 +358,7 @@
               id="org.apache.geronimo.st.v30.ui.commands.downloadGeronimo"
               name="Download Geronimo Servers">
         </command>
-    </extension>
+    </extension-->
     
     
     
@@ -369,7 +369,7 @@
      ##                                                                                                               ##
      ###################################################################################################################
      -->
-    <extension point="org.eclipse.ui.menus">
+    <!--extension point="org.eclipse.ui.menus">
         <menuContribution
               locationURI="menu:org.eclipse.ui.main.menu?after=additions">
             <menu
@@ -397,7 +397,7 @@
                 </command>
             </menu>
         </menuContribution>
-    </extension>
+    </extension-->
 
 
 
