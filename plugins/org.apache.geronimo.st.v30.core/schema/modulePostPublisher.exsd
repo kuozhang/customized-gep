@@ -3,7 +3,7 @@
 <schema targetNamespace="org.apache.geronimo.st.v30.core" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appInfo>
-         <meta.schema plugin="org.apache.geronimo.st.v30.core" id="modulePrePublisher" name="Third Party Module PrePublisher"/>
+         <meta.schema plugin="org.apache.geronimo.st.v30.core" id="modulePostPublisher" name="Third Party Module PostPublisher"/>
       </appInfo>
       <documentation>
          [Enter description of this extension point.]
@@ -18,7 +18,7 @@
       </annotation>
       <complexType>
          <sequence minOccurs="1" maxOccurs="unbounded">
-            <element ref="modulePrePublisher" minOccurs="1" maxOccurs="unbounded"/>
+            <element ref="modulePostPublisher" minOccurs="1" maxOccurs="unbounded"/>
          </sequence>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -47,7 +47,7 @@
       </complexType>
    </element>
 
-   <element name="modulePrePublisher">
+   <element name="modulePostPublisher">
       <complexType>
          <attribute name="class" type="string">
             <annotation>
@@ -55,7 +55,7 @@
                   
                </documentation>
                <appInfo>
-                  <meta.attribute kind="java" basedOn=":org.apache.geronimo.st.v30.core.IModulePrePublisher"/>
+                  <meta.attribute kind="java" basedOn=":org.apache.geronimo.st.v30.core.IModulePostPublisher"/>
                </appInfo>
             </annotation>
          </attribute>

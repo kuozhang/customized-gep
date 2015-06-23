@@ -916,6 +916,7 @@ public class GeronimoServerBehaviourDelegate extends ServerBehaviourDelegate imp
         boolean shouldPublishModule = GeronimoPublishHelper.prePublishModule(this, kind, deltaKind, module,
                 getPublishedResourceDelta(module), monitor);
 
+        boolean shouldPostPublishModule = true;
         if (shouldPublishModule) {
             try {
                 // NO_CHANGE need if app is associated but not started and no delta
@@ -932,6 +933,7 @@ public class GeronimoServerBehaviourDelegate extends ServerBehaviourDelegate imp
                 // "Synchronized" for the server state, and set the module status to an error message
                 // for the GEP end-user to see.
                 //
+                shouldPostPublishModule = false;
                 setModuleStatus(module, new Status(IStatus.ERROR, Activator.PLUGIN_ID,
                         "Error publishing module to server"));
                 setModulePublishState(module, IServer.PUBLISH_STATE_UNKNOWN);
@@ -940,6 +942,12 @@ public class GeronimoServerBehaviourDelegate extends ServerBehaviourDelegate imp
             }
 
             Trace.tracePoint("Exit ", Activator.traceCore, "GeronimoServerBehaviourDelegate.publishModule");
+        }
+
+        if (shouldPostPublishModule) {
+            GeronimoPublishHelper.postPublishModule(this, kind, deltaKind, module, getPublishedResourceDelta(module),
+                    monitor);
+
         }
     }
     
